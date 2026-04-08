@@ -72,7 +72,8 @@ Note: Same base image as oamd. SHA changes over time as vulnerabilities are disc
 - ARGs must be re-declared after each FROM in stages that use them
 
 ### HTTPS Access
-- Builder stages that download from the internet need `ca-certificates` installed and `update-ca-certificates` run
+- Builder stages that download from the internet need `ca-certificates` installed via apt
+- Do NOT run `update-ca-certificates` — the base image is kept current; installing the package is sufficient
 - The base image does NOT have ca-certificates pre-installed
 
 ### APT Cache Mount Pattern

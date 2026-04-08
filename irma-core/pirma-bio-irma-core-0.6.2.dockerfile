@@ -12,8 +12,7 @@ RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
  && apt-get update \
  && apt-get -y --no-install-recommends install \
       ca-certificates \
-      curl \
- && update-ca-certificates
+      curl
 
 WORKDIR /build
 
